@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Class Activity 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/x-icon" href="Logo_last.png">
+</head>
+
+<style>
+  .activity {
+    width: 100%;
+    height: auto;
+    background-color: rgb(156, 225, 247);
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+  }
+
+  .activity p {
+    font-size: 18px;
+  }
+
+  #img-area {
+    width: 40%;
+  }
+
+  #content-area {
+    width: 60%;
+  }
+
+  #heading {
+    font-family: Harrington;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  table,
+  th,
+  td {
+    border: 2px solid black;
+    padding: 12px;
+    font-size: 29px;
+  }
+
+  button {
+    padding: 10px 20px; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Increase button text size */
+  }
+  
+  .example {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .example li {
+    list-style: none;
+  }
+</style>
+
+<body>
+  <audio id="cheers">
+    <source src="cheers.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="points" src="Points.mp3"></audio>
+  <audio id="fail" src="fail.mp3"></audio>
+  
+  <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+    <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+    <span> <img src="header.png" width="30%" height="auto" class="img-responsive"></span>
+  </div>
+  <br>
+
+  <audio id="lamb" src="./sounds/lamb.mp3"></audio>
+  <audio id="doubt" src="./sounds/doubt.mp3"></audio>
+  <audio id="scissors" src="./sounds/scissors.mp3"></audio>
+  <audio id="duck" src="./sounds/duck.mp3"></audio>
+  <audio id="write" src="./sounds/write.mp3"></audio>
+  <audio id="answer" src="./sounds/answer.mp3"></audio>
+
+  <center>
+    <!-- <h1 id="heading">What did I learn?</h1> -->
+    <span style="font-size:1.6rem; color: rgb(154, 34, 240); font-weight: 600;">Silent letters (B, C, W)
+    </span>
+  </center>
+
+  <div class="container" style="font-size: 22px;">
+    <p style="text-align: left;">
+      <p class="text-start">
+          Silent letters are letters in words that we write but don’t say out loud. They help us spell words correctly, even though we don’t hear them when we speak.
+          <p></p>
+  
+          Here Are Some Important Rules About Silent Letters:<br>
+  
+          👉 <b>Silent "B":</b><br>
+          Rule: The letter "B" is silent when it comes after "M" or before "T" in a word.<br>
+          Examples: 
+          <button onclick="playSound('lamb')">📢 Lamb</button> (we say "lam"), 
+          <button onclick="playSound('doubt')">📢 Doubt</button> (we say "dout").
+          <p></p>
+  
+          👉 <b>Silent "C":</b><br>
+          Rule: The letter "C" is silent when it comes after "S" and before "I" or "E," or in the "ck" combination.<br>
+          Examples: 
+          <button onclick="playSound('scissors')">📢 Scissors</button> (we say "sizzors"), 
+          <button onclick="playSound('duck')">📢 Duck</button> (we say "duk").
+          <p></p>
+  
+          👉 <b>Silent "W":</b><br>
+          Rule: The letter "W" is silent when it comes before "R" at the start of a word and in some other words.<br>
+          Examples: 
+          <button onclick="playSound('write')">📢 Write</button> (we say "rite"), 
+          <button onclick="playSound('answer')">📢 Answer</button> (we say "anser").
+      </p>
+  </p>
+  
+
+    <div style="display: flex; justify-content: center;">
+      <a href="fun_time.html" class="btn btn-primary mb-5 btn-lg text-center" style="height: 50px; width: 200px; font-size: 22px;">Word Meanings</a>
+    </div>
+  </div>
+
+  <script>
+    function playSound(soundId) {
+      var audio = document.getElementById(soundId);
+      if (audio) {
+        audio.play();
+      }
+    }
+  </script>
+</body>
+
+</html>
